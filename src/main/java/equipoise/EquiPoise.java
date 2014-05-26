@@ -16,7 +16,7 @@ public class EquiPoise {
         @Instance(value = "equipoise")
         public static EquiPoise instance;
         
-        @SidedProxy(clientSide="io.github.teamfom.equipoise.client.ClientProxy", serverSide="io.github.teamfom.equipoise.common.CommonProxy")
+        @SidedProxy(clientSide="equipoise.client.ClientProxy", serverSide="equipoise.common.CommonProxy")
         public static CommonProxy proxy;
         
         @EventHandler
