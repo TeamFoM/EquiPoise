@@ -3,6 +3,7 @@ package equipoise;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.BiomeGenBase;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -10,6 +11,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import equipoise.biome.BiomeGenCorruption;
+import equipoise.biome.BiomeGenPurity;
 import equipoise.common.CommonProxy;
 
 
@@ -21,6 +24,8 @@ public class EquiPoise {
         
         @SidedProxy(clientSide="equipoise.client.ClientProxy", serverSide="equipoise.common.CommonProxy")
         public static CommonProxy proxy;
+        
+        public static BiomeGenBase purity, corruption; // Initialize last
         
         @EventHandler
         public void preInit(FMLPreInitializationEvent event) {
@@ -37,6 +42,9 @@ public class EquiPoise {
                 ItemRegistry();
                 GameRegistry();
                 Recipes();
+                
+                purity = new BiomeGenPurity(146);
+                corruption = new BiomeGenCorruption(147);
         }
         
         private void Blocks() {
