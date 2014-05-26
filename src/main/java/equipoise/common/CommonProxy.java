@@ -1,4 +1,4 @@
-package io.github.teamfom.equipoise.common;
+package equipoise.common;
 
 public class CommonProxy {
 

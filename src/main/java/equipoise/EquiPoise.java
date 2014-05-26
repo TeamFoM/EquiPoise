@@ -1,6 +1,5 @@
-package io.github.teamfom.equipoise;
+package equipoise;
 
-import io.github.teamfom.equipoise.common.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -8,6 +7,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import equipoise.common.CommonProxy;
 
 
 @Mod(modid="equipoise", name="EquiPoise", version="0.1.0")

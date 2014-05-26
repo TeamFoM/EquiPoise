@@ -1,7 +1,7 @@
-package io.github.teamfom.equipoise.client;
+package equipoise.client;
 
+import equipoise.common.CommonProxy;
 import net.minecraftforge.client.MinecraftForgeClient;
-import io.github.teamfom.equipoise.common.CommonProxy;
 
 public class ClientProxy extends CommonProxy {
         
